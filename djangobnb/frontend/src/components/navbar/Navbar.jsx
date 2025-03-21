@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import Box from '@mui/material/Box';
 import SearchFilters from './SearchFilters';
+import UserNav from './UserNav';
 
 
 const Navbar = () => {
@@ -19,7 +20,9 @@ const Navbar = () => {
                         <SearchFilters/>
                     </div>
                     <div className='navbar__user_nav_and_add_property'>
-                        Add property - User nav
+                        Add Property 
+                        -
+                        <UserNav/>
                     </div>
                 </div>
             </div>
