@@ -1,19 +1,20 @@
-.usernav {
+.usernav__button {
     cursor: pointer;
-    display: inline-block;
-    padding: 0.5rem;
-    align-items: center;
     display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.5rem 0.75rem;
     border: 1px solid #e0e0e0;
     border-radius: 9999px;
+    background-color: white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
 }
-p-2 inline-block border rounded-full
-
-.search__filter__text {
-    font-family: 'CustomFont', sans-serif;
-    font-weight: 600; 
-    font-size: 1rem;
-    color: #5f5f5f;
-    line-height: 1.2; 
-    margin: 0; 
+.usernav__button:hover {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.icon {
+    color: #555;
+    width: 30px;
+    height: 30px;
 }

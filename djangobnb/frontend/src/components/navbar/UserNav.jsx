@@ -1,11 +1,13 @@
 import React from 'react';
 import "./UserNav.css";
+import { Menu, User } from "lucide-react";
 
 const UserNav = () => {
     return (
-        <div className="usernav">
-            asdf
-        </div>
+        <button className="usernav__button">
+            <Menu className="icon"/>
+            <User className="icon"/>
+        </button>
     );
 }
 
