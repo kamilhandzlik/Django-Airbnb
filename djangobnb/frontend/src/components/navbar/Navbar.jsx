@@ -5,6 +5,7 @@ import logo from "../../assets/logo.png";
 import Box from '@mui/material/Box';
 import SearchFilters from './SearchFilters';
 import UserNav from './UserNav';
+import AddPropertyButton from './AddPropertyButton';
 
 
 const Navbar = () => {
@@ -20,8 +21,8 @@ const Navbar = () => {
                         <SearchFilters/>
                     </div>
                     <div className='navbar__user_nav_and_add_property'>
-                        Add Property 
-                        -
+                        <AddPropertyButton/> 
+                        
                         <UserNav/>
                     </div>
                 </div>

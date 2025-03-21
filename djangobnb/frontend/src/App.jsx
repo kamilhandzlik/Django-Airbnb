@@ -4,6 +4,7 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from "./components/navbar/Navbar";
 import './App.css'
+import Categories from "./components/navbar/Categories";
 
 
 function App() {
@@ -13,8 +14,7 @@ function App() {
     <Router>
       <Navbar/>
       <div className='pt-24'>
-        <h1>Django Bnb</h1>
-        <h2 className="dark-red-text">React and Vite are working!</h2>
+        <Categories/>
       </div>
     </Router>
   )

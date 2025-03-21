@@ -3,7 +3,7 @@
 @font-face {
     font-family: 'CustomFont';
     src: url('../assets/fonts/CustomFont.ttf') format('truetype');
-    font-weight: 600; /* semibold */
+    font-weight: 600; 
     font-style: normal;
 }
 
@@ -14,7 +14,7 @@
   color: #d50027;
 }
 .pt-24 {
-  padding-top: 80px;
+  padding-top: 120px;
 }
 
 .hidden-lg-block {
