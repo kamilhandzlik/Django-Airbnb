@@ -1,0 +1,40 @@
+.property-list-item-pointer {
+  cursor: pointer;
+}
+.property-list-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  border-radius: 0.75rem;
+}
+.property-list-item-image {
+  max-width: 768px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.1s ease-in-out;
+}
+.property-list-item-image:hover {
+  transform: scale(1.1);
+}
+.property-list-item-content {
+  margin-top: 0.5rem;
+}
+.property-list-item-text-large {
+  font-family: "CustomFont", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #2b2828;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.property-list-item-text-small {
+  font-family: "CustomFont", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #7a7a7a;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
