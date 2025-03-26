@@ -1,0 +1,96 @@
+.reservation-sidebar {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  grid-column: span 2;
+  border-radius: 0.75rem;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.reservation-sidebar-text-price {
+  font-family: "CustomFont", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #000000;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.reservation-sidebar-choices {
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid #9ca3af;
+}
+
+.reservation-sidebar-text-choices {
+  font-family: "CustomFont", sans-serif;
+  font-weight: 200;
+  font-size: 0.75rem;
+  color: #000000;
+  line-height: 1.2;
+  margin-left: -0.25rem;
+  text-align: left;
+  width: 100%;
+}
+
+.reservation-sidebar-text-guests {
+  font-family: "CustomFont", sans-serif;
+  font-weight: bold;
+  font-size: 0.75rem;
+  color: #000000;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  display: block;
+  width: 100%;
+}
+
+.reservation-sidebar-guests {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+
+.reservation-sidebar-label {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #333333;
+}
+
+.reservation-sidebar-select {
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+}
+
+.book-button {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  align-items: center;
+  background-color: #ff0037c2;
+  border-radius: 0.75rem;
+}
+
+.book-button:hover {
+  background-color: #fa0053;
+}
+
+.book-button-text {
+  font-family: "CustomFont", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #ffffff;
+  /* line-height: 1.2; */
+  margin-bottom: 0.5rem;
+  text-align: center;
+}

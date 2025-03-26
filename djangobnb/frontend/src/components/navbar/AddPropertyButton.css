@@ -1,20 +1,20 @@
 .add__property__button {
-    cursor: pointer;
-    justify-content: center; 
-    align-items: flex-start; 
-    display: flex;
-    padding: 0.5rem 2rem; 
-    border-radius: 9999px;
-    height: 48px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 0.5rem 2rem;
+  border-radius: 9999px;
+  height: 48px;
 }
 .add__property__button:hover {
-    background-color: #e8e8e8;
+  background-color: #e8e8e8;
 }
 .add-property-text {
-    font-family: "CustomFont", sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    color: #000000c0;
-    line-height: 1.2;
-    margin: 0;
+  font-family: "CustomFont", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #000000c0;
+  line-height: 1.2;
+  margin: 0;
 }

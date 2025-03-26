@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap");
+
+@font-face {
+  font-family: "CustomFont";
+  src: url("../assets/fonts/CustomFont.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+.red-text {
+  color: #ff385c;
+}
+.dark-red-text {
+  color: #d50027;
+}
+.pt-24 {
+  padding-top: 120px;
+}
+
+.hidden-lg-block {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .hidden-lg-block {
+    display: block;
+  }
+}

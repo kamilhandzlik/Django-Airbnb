@@ -1,6 +1,6 @@
 import React from "react";
 import "./PropertyListItem.css";
-import BeachHouse from "../images/beach_house_1.jpg"; // Corrected path
+import BeachHouse from "../images/beach_house_1.jpg";
 
 const PropertyListItem = () => {
   return (
@@ -16,8 +16,8 @@ const PropertyListItem = () => {
         <div className="property-list-item-text-large">Property name</div>
         <div className="property-list-item-text-small">
           <p>
-            {/*  TODO change property price to proper name in model when backend is added */}
-            <strong>Property price$ </strong>
+            {/*  TODO change 200 to proper name in model when backend is added */}
+            <strong>$200 </strong>
             per night
           </p>
         </div>

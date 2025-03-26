@@ -1,0 +1,75 @@
+.pt-24 {
+  padding-top: 120px;
+}
+.property-detail-page {
+  padding: 1.5rem;
+}
+.property-detail-page__container {
+  width: full;
+  height: 64vh;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+}
+.property-detail-page__image {
+  max-width: 1500px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.property-detail-page-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media (min-width: 768px) {
+  .property-detail-page-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.property-detail-page-grid-left {
+  background-color: white;
+}
+.property-detail-page-grid-right {
+  background-color: white;
+}
+.property-list-detail-text-large {
+  font-family: "CustomFont", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #2b2828;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+.property-list-detail-text-small {
+  font-family: "CustomFont", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #7a7a7a;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+.property-list-detail-text-description {
+  font-family: "CustomFont", sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+.profile-image {
+  display: flex;
+  align-items: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  gap: 1rem;
+}
+.rounded {
+  border-radius: 100%;
+}

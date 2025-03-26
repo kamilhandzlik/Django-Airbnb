@@ -1,18 +1,23 @@
 .search__filter {
+  display: flex;
   align-items: center;
   justify-content: space-between;
   height: 60px;
-  display: flex;
   border: 1px solid #e0e0e0;
   border-radius: 9999px;
+  padding: 0 1rem;
+  transition: all 0.3s ease;
 }
 
 .search__filter__container {
-  cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-grow: 1;
+  min-width: 150px;
+  transition: all 0.3s ease;
 }
+
 .search__filter__field__1 {
   justify-content: center;
   align-items: flex-start;
@@ -20,16 +25,13 @@
   flex-direction: column;
   width: 250px;
   height: 44px;
-  padding: 0.5rem 2rem;
+  padding: 0rem 0.5rem;
   background-color: #fffefe;
   border-radius: 9999px;
   transition: background-color 0.2s ease;
   gap: 0.2rem;
 }
 
-.search__filter__field__1:hover {
-  background-color: #e8e8e8;
-}
 .search__filter__field__2 {
   justify-content: center;
   align-items: flex-start;
@@ -44,9 +46,6 @@
   gap: 0.2rem;
 }
 
-.search__filter__field__2:hover {
-  background-color: #e8e8e8;
-}
 .search__filter__text {
   font-family: "CustomFont", sans-serif;
   font-weight: 600;
@@ -55,6 +54,15 @@
   line-height: 1.2;
   margin: 0;
 }
+.search__filter__text-1 {
+  font-family: "CustomFont", sans-serif;
+  font-weight: 100;
+  font-size: 2rem;
+  color: #5f5f5f;
+  line-height: 1.2;
+  margin: 0;
+}
+
 .search__button {
   cursor: pointer;
   justify-content: center;
@@ -69,15 +77,39 @@
 .search__button:hover {
   background-color: #fa0053;
 }
-.search__button__text {
-  font-family: "CustomFont", sans-serif;
-  font-weight: 600;
-  font-size: 2rem;
-  color: #ffffff;
-  line-height: 1.2;
-  margin: 0;
+
+@media (max-width: 1024px) {
+  .search__filter__container {
+    min-width: 100px;
+    flex-grow: 0.5;
+  }
+
+  .search__filter__field__1,
+  .search__filter__field__2 {
+    min-width: 80px;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.9rem;
+  }
 }
-.search__button__icon {
-  font-size: 1.5rem;
-  color: #ffffff;
+
+@media (max-width: 768px) {
+  .search__filter__container {
+    display: none;
+  }
+
+  .search__button {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+  .search__button__text {
+    font-family: "CustomFont", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #ffffff;
+    line-height: 1.2;
+    margin: 0;
+  }
 }
