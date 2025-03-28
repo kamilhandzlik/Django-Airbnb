@@ -1,4 +1,5 @@
 .reservation-sidebar {
+  width: 540px;
   margin-top: 1.5rem;
   padding: 1.5rem;
   grid-column: span 2;
@@ -9,12 +10,27 @@
 }
 
 .reservation-sidebar-text-price {
+  display: flex;
+  justify-content: space-between;
   font-family: "CustomFont", sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
   color: #000000;
   line-height: 1.2;
   margin-bottom: 1rem;
+  text-align: left;
+}
+
+.reservation-sidebar-text-informational {
+  display: flex;
+  justify-content: space-between;
+  font-family: "CustomFont", sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #333333;
+  line-height: 1.2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   text-align: left;
 }
 
