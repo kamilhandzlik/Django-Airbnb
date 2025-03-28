@@ -19,7 +19,92 @@
 .my-reservations-page-grid {
   display: grid;
   gap: 2rem;
+  align-items: center;
+  gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
 }
+
 .my-reservations-page-reservations {
+  border-radius: 20px;
   box-shadow: 1px 1px 3px #000000a9;
+}
+
+.my-reservations-page-details {
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.my-reservations-text-property-name {
+  font-family: "Customfont", "sans-serif";
+  font-weight: 600;
+  font-size: 1.75rem;
+  color: #1b1a1a;
+  line-height: 2rem;
+  margin-top: 0.75;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.my-reservations-text-property-details {
+  /* background-color: red; */
+  font-family: "Customfont", "sans-serif";
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #1b1a1a;
+  line-height: 1.25rem;
+  margin-bottom: 1.25rem;
+  margin-left: 1rem;
+  text-align: left;
+}
+
+.my-reservations-text-property-descriptions {
+  /* background-color: blue; */
+  font-family: "Customfont", "sans-serif";
+  font-weight: 200;
+  font-size: 1.25rem;
+  color: #1b1a1a;
+  line-height: 1.25rem;
+  margin-bottom: 1.25rem;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.my-reservations-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.property-image {
+  border-radius: 20px;
+  height: 400px;
+  width: 400px;
+  transition: transform 0.1s ease;
+  overflow: hidden;
+}
+
+.property-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.1s ease;
+}
+
+.property-image img:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 728px) {
+  .my-reservations-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .property-image {
+    width: 100%;
+    height: auto;
+  }
 }
