@@ -1,0 +1,25 @@
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+}
+
+.my-reservations-text-title {
+  font-family: "Customfont", "sans-serif";
+  font-weight: 600;
+  font-size: 2rem;
+  color: #1b1a1a;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.my-reservations-page-grid {
+  display: grid;
+  gap: 2rem;
+}
+.my-reservations-page-reservations {
+  box-shadow: 1px 1px 3px #000000a9;
+}
