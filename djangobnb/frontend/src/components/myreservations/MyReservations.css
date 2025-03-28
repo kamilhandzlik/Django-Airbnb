@@ -108,3 +108,26 @@
     height: auto;
   }
 }
+
+.property-button {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  align-items: center;
+  background-color: #ff0037c2;
+  border-radius: 0.75rem;
+}
+
+.property-button:hover {
+  background-color: #fa0053;
+}
+
+.property-button-text {
+  font-family: "CustomFont", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}

@@ -59,6 +59,10 @@ const MyResevations = () => {
                     $100
                   </p>
                 </div>
+                <br />
+                <div className="property-button">
+                  <h1 className="property-button-text">Go to property</h1>
+                </div>
               </div>
             </div>
           </div>
@@ -106,6 +110,10 @@ const MyResevations = () => {
                   <p className="my-reservations-text-property-descriptions">
                     $100
                   </p>
+                </div>
+                <br />
+                <div className="property-button">
+                  <h1 className="property-button-text">Go to property</h1>
                 </div>
               </div>
             </div>
