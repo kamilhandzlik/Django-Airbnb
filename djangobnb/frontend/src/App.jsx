@@ -4,6 +4,7 @@ import "./App.css";
 import HomePage from "./components/homepage/HomePage";
 import PropertyList from "./components/properties/PropertyList";
 import PropertyDetailPage from "./components/properties/PropertyDetailPage";
+import LandlordPage from "./components/landlords/LandlordPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/properties" element={<PropertyList />} />
         <Route path="/properties/:id" element={<PropertyDetailPage />} />
+        <Route path="/londlord-page" element={<LandlordPage />} />
       </Routes>
     </Router>
   );
