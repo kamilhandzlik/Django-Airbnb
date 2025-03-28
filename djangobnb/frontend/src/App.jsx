@@ -14,6 +14,7 @@ function App() {
         <Route path="/properties" element={<PropertyList />} />
         <Route path="/properties/:id" element={<PropertyDetailPage />} />
         <Route path="/londlord-page" element={<LandlordPage />} />
+        <Route path="/londlord-page/:id" element={<LandlordPage />} />
       </Routes>
     </Router>
   );
