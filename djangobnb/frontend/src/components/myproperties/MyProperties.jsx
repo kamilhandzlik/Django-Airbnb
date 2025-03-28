@@ -2,6 +2,7 @@ import React from "react";
 import "./MyProperties.css";
 import Navbar from "../navbar/Navbar";
 import Categories from "../categories/Categories";
+import PropertyList from "../properties/PropertyList";
 
 const MyProperties = () => {
   return (
@@ -11,7 +12,8 @@ const MyProperties = () => {
         <Categories />
       </div>
       <main>
-        <h1>My properties</h1>
+        <h1 className="property-list-text">My properties</h1>
+        <PropertyList />
       </main>
     </>
   );
