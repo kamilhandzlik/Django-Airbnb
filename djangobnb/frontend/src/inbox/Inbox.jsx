@@ -2,6 +2,7 @@ import React from "react";
 import "./Inbox.css";
 import Navbar from "../components/navbar/Navbar";
 import Categories from "../components/categories/Categories";
+import Conversation from "./Converstions";
 
 const Inbox = () => {
   return (
@@ -11,7 +12,9 @@ const Inbox = () => {
         <Categories />
       </div>
       <main>
-        <h1>Inbox</h1>
+        <Conversation />
+        <Conversation />
+        <Conversation />
       </main>
     </>
   );

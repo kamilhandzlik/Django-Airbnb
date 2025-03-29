@@ -1,0 +1,18 @@
+.container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-style: solid;
+  border-radius: 20px;
+}
+
+.converstions-text {
+  font-family: "Customfont", "sans-serif";
+  font-weight: 200;
+  font-size: 1rem;
+  color: #424242;
+  line-height: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+}
