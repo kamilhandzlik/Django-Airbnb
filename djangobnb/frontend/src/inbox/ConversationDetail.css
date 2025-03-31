@@ -1,0 +1,78 @@
+.conversation-detail-container {
+  max-height: 400px;
+  max-width: 1200px;
+  box-shadow: 1px 1px 5px gray;
+  border-radius: 20px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.message-user {
+  width: 80%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 20px;
+  background-color: rgb(155, 228, 148);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-left: auto;
+  text-align: right;
+  transition: 0.3s ease;
+}
+
+.message-user .message-text {
+  font-family: "Customfont", "sansserif";
+  font-weight: 200;
+  font-size: 1rem;
+  color: rgb(66, 66, 66);
+  line-height: 1rem;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.message-user:hover {
+  background-color: rgb(113, 189, 106);
+}
+
+.message-diffrent-user {
+  width: 80%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 20px;
+  background-color: rgb(228, 148, 148);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+  margin-right: auto;
+  transition: 0.3s ease;
+}
+
+.message-diffrent-user:hover {
+  background-color: rgb(170, 93, 93);
+}
+
+.message-text {
+  font-family: "Customfont", "sansserif";
+  font-weight: 200;
+  font-size: 1rem;
+  color: rgb(66, 66, 66);
+  line-height: 1rem;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  margin-right: 0.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}

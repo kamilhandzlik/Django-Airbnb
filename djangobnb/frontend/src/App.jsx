@@ -8,6 +8,7 @@ import LandlordPage from "./components/landlords/LandlordPage";
 import MyResevations from "./components/myreservations/MyReservations";
 import MyProperties from "./components/myproperties/MyProperties";
 import Inbox from "./inbox/Inbox";
+import ConversationPage from "./inbox/ConversationPage";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
         <Route path="/my-properties/:id" element={<MyProperties />} />
         {/* <Route path="" element={</>} /> */}
         <Route path="/inbox" element={<Inbox />} />
-        <Route path="/inbox/:id" element={<Inbox />} />
+        <Route path="/inbox/:id" element={<ConversationPage />} />
       </Routes>
     </Router>
   );
