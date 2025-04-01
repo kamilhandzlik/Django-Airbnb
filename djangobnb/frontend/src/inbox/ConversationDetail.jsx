@@ -22,6 +22,16 @@ const ConversationDetail = () => {
           </div>
           <p className="message-text">Example message without backend</p>
         </div>
+        <div className="insert-field">
+          <input
+            type="text"
+            placeholder="Type your message"
+            className="input-field"
+          />
+          <button className="insert-field-button">
+            <p className="insert-field-button-text">➤</p>
+          </button>
+        </div>
       </div>
     </>
   );
