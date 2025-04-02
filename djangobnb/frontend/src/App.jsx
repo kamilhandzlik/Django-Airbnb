@@ -7,8 +7,8 @@ import PropertyDetailPage from "./components/properties/PropertyDetailPage";
 import LandlordPage from "./components/landlords/LandlordPage";
 import MyResevations from "./components/myreservations/MyReservations";
 import MyProperties from "./components/myproperties/MyProperties";
-import Inbox from "./inbox/Inbox";
-import ConversationPage from "./inbox/ConversationPage";
+import Inbox from "./components/inbox/Inbox";
+import ConversationPage from "./components/inbox/ConversationPage";
 
 function App() {
   return (

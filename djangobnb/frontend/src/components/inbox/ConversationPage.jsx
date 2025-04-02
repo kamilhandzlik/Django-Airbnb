@@ -1,7 +1,7 @@
 import React from "react";
 import "./ConversationPage.css";
-import Navbar from "../components/navbar/Navbar";
-import Categories from "../components/categories/Categories";
+import Navbar from "../navbar/Navbar";
+import Categories from "../categories/Categories";
 import ConversationDetail from "./ConversationDetail";
 
 const ConversationPage = () => {

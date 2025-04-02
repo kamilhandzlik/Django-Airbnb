@@ -1,6 +1,6 @@
 import React from "react";
 import "./ConversationDetail.css";
-import ProfilePic from "../components/images/temporary/profile_pic.jpg";
+import ProfilePic from "../images/temporary/profile_pic.jpg";
 
 const ConversationDetail = () => {
   return (

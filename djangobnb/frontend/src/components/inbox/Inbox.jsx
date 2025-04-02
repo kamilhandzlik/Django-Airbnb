@@ -1,7 +1,7 @@
 import React from "react";
 import "./Inbox.css";
-import Navbar from "../components/navbar/Navbar";
-import Categories from "../components/categories/Categories";
+import Navbar from "../navbar/Navbar";
+import Categories from "../categories/Categories";
 import Conversation from "./Converstions";
 
 const Inbox = () => {

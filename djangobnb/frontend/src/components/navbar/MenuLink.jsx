@@ -3,22 +3,24 @@ import PropTypes from "prop-types";
 import "./MenuLink.css";
 ("use client");
 
-const MenuLink = ({ label, onClick }) => {
+const MenuLink = ({ label, onClick, href }) => {
   console.log("Label:", label);
   return (
-    <div className="menu-link" onClick={onClick}>
+    <a className="menu-link" onClick={onClick} href={href}>
       {label}
-    </div>
+    </a>
   );
 };
 
 MenuLink.propTypes = {
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func,
+  href: PropTypes.string,
 };
 
 MenuLink.defaultProps = {
   onClick: () => {},
+  href: "#",
 };
 
 export default MenuLink;
