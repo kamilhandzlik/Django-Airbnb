@@ -1,4 +1,4 @@
-import React from "react";
+import React, { use } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
@@ -7,9 +7,10 @@ import SearchFilters from "./SearchFilters";
 import UserNav from "./UserNav";
 import AddPropertyButton from "./AddPropertyButton";
 import Modal from "../modals/Modal";
+import LoginModal from "../modals/LoginModal";
 
 const Navbar = () => {
-  const content = <p>This is the modal content</p>; // Upewniono się, że to JSX
+  const content = <p>This is the modal content</p>;
 
   return (
     <nav className="navbar">
@@ -30,7 +31,8 @@ const Navbar = () => {
           <div className="navbar__user_nav_and_add_property">
             <AddPropertyButton />
             <UserNav />
-            <Modal label="Modal test" content={content} />
+            {/* <Modal label="Modal test" content={content} isOpen={false} /> */}
+            <LoginModal />
           </div>
         </div>
       </div>
