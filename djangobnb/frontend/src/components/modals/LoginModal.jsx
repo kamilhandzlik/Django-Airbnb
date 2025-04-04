@@ -6,7 +6,32 @@ import { useLoginModal } from "../hooks/LoginModalContext.jsx";
 const LoginModal = () => {
   const { isOpen, closeModal } = useLoginModal();
 
-  const content = <h2>Welcome to Django Bnb, please log in</h2>;
+  const content = (
+    <>
+      <form className="login-form">
+        <input
+          placeholder="Enter your email address"
+          type="email"
+          className="login-form-inputfield"
+        />
+        <input
+          placeholder="Your password"
+          type="password"
+          className="login-form-inputfield"
+        />
+
+        <br />
+        <div className="login-form-error-message">
+          <p>The error message</p>
+        </div>
+        <hr className="login-form-divider" />
+        <button type="submit" className="login-button">
+          <h1 className="login-button-text">Submit</h1>
+        </button>
+      </form>
+    </>
+  );
+
   return (
     <Modal
       label="Log in"
