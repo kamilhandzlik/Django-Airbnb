@@ -8,6 +8,7 @@ import UserNav from "./UserNav";
 import AddPropertyButton from "./AddPropertyButton";
 import Modal from "../modals/Modal";
 import LoginModal from "../modals/LoginModal";
+import SignUpModal from "../modals/SignUpModal";
 
 const Navbar = () => {
   const content = <p>This is the modal content</p>;
@@ -31,8 +32,9 @@ const Navbar = () => {
           <div className="navbar__user_nav_and_add_property">
             <AddPropertyButton />
             <UserNav />
-            {/* <Modal label="Modal test" content={content} isOpen={true} /> */}
+
             <LoginModal />
+            <SignUpModal />
           </div>
         </div>
       </div>

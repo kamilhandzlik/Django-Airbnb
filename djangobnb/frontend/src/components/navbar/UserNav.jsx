@@ -3,11 +3,13 @@ import "./UserNav.css";
 import { Menu, User } from "lucide-react";
 import MenuLink from "./MenuLink";
 import { useLoginModal } from "../hooks/LoginModalContext.jsx";
+import { useSignUpModal } from "../hooks/SignUpModalContext.jsx";
 
 const UserNav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const loginModal = useLoginModal();
+  const signupModal = useSignUpModal();
 
   return (
     <div className="usernav">
@@ -25,8 +27,11 @@ const UserNav = () => {
             }}
           />
           <MenuLink
-            label="Sign in"
-            onClick={() => console.log("Clicked Sign in")}
+            label="Sign up"
+            onClick={() => {
+              console.log("Clicked Sign up");
+              signupModal.openModal();
+            }}
           />
         </div>
       )}
