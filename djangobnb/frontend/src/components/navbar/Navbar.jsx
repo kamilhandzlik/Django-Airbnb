@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
@@ -31,7 +31,7 @@ const Navbar = () => {
           <div className="navbar__user_nav_and_add_property">
             <AddPropertyButton />
             <UserNav />
-            {/* <Modal label="Modal test" content={content} isOpen={false} /> */}
+            {/* <Modal label="Modal test" content={content} isOpen={true} /> */}
             <LoginModal />
           </div>
         </div>

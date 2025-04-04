@@ -9,6 +9,8 @@ import MyResevations from "./components/myreservations/MyReservations";
 import MyProperties from "./components/myproperties/MyProperties";
 import Inbox from "./components/inbox/Inbox";
 import ConversationPage from "./components/inbox/ConversationPage";
+import { LoginModalProvider } from "./components/hooks/LoginModalContext.jsx";
+import ReactDOM from "react-dom/client";
 
 function App() {
   return (
