@@ -32,7 +32,12 @@ const Navbar = () => {
           <div className="navbar__user_nav_and_add_property">
             <AddPropertyButton />
             <UserNav />
-
+            <Modal
+              label="Modal Title"
+              content={content}
+              isOpen={false}
+              closeModal={() => {}}
+            />
             <LoginModal />
             <SignUpModal />
           </div>
