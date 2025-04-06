@@ -1,0 +1,5 @@
+Django>=4.0,<5.0
+djangorestframework
+psycopg2-binary
+django-extensions==3.2.3
+python-decouple==3.8
