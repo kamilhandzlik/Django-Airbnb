@@ -14,6 +14,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Skopiowanie całego projektu
 COPY . .
+COPY .env /app/.env
+
 
 # Otwarcie portu aplikacji Django
 EXPOSE 8000
