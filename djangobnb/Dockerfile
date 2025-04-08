@@ -1,21 +1,22 @@
+# Użyj oficjalnego obrazu Pythona
 FROM python:3.11-slim
 
-# Ustawienie zmiennych środowiskowych
+# Zmienne środowiskowe dla Pythona
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Ustawienie katalogu roboczego
-WORKDIR /Django-Airbnb/djangobnb
+WORKDIR /app
 
-# Kopiowanie pliku requirements.txt i instalacja zależności
-COPY ../requirements.txt ./  
+# Skopiowanie pliku requirements.txt i instalacja zależności
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Kopiowanie całego projektu backendowego
-COPY . .  
+# Skopiowanie całego projektu
+COPY . .
 
-# Otwieranie portu 8000
+# Otwarcie portu aplikacji Django
 EXPOSE 8000
 
-# Uruchamianie serwera deweloperskiego Django
+# Komenda do uruchomienia serwera
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
