@@ -33,9 +33,9 @@ services:
     ports:
       - "5432:5432"
     environment:
+      POSTGRES_DB: djangobnb
       POSTGRES_USER: django
       POSTGRES_PASSWORD: django
-      POSTGRES_DB: djangobnb
     volumes:
       - postgres_data:/var/lib/postgresql/data
 

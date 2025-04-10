@@ -3,3 +3,4 @@ djangorestframework
 psycopg2-binary
 django-extensions==3.2.3
 python-decouple==3.8
+psycopg2-binary==2.9.10
