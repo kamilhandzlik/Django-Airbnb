@@ -12,5 +12,6 @@ if [ "$Database" = "postgres" ]; then
 fi
 
 python manage.py makemigrations
+python manage.py migrate
 
 exec "$@"
