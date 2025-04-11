@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ "$Database" = "postgres" ]
+if [ "$Database" = "postgres" ]; then
     echo "Check if database is running ..."
 
     while ! nc -z $SQL_HOST $SQL_PORT; do

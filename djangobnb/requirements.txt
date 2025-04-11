@@ -1,6 +1,13 @@
 Django>=4.0,<5.0
 djangorestframework
+djangorestframework-simplejwt
 psycopg2-binary
 django-extensions==3.2.3
 python-decouple==3.8
 psycopg2-binary==2.9.10
+dj-rest-auth==4.0.0
+django-allauth==0.52.0
+django-cors-headers==4.3.0
+pillow==10.2.0
+channels==4.0.0
+daphne==4.0.0
