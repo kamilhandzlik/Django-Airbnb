@@ -2,7 +2,17 @@ import React from "react";
 import "./PropertyListItem.css";
 import BeachHouse from "../images/beach_house_1.jpg";
 
-const PropertyListItem = () => {
+/**
+ * @typedef {Object} PropertyType
+ * @property {string} id
+ * @property {string} title
+ * @property {number} price_per_night
+ */
+
+/**
+ * @param {{ property: PropertyType }} props
+ */
+const PropertyListItem = ({ property }) => {
   return (
     <div className="property-list-item-pointer">
       <div className="property-list-item">
@@ -13,11 +23,10 @@ const PropertyListItem = () => {
         />
       </div>
       <div className="property-list-item-content">
-        <div className="property-list-item-text-large">Property name</div>
+        <div className="property-list-item-text-large">{property.title}</div>
         <div className="property-list-item-text-small">
           <p>
-            {/*  TODO change 200 to proper name in model when backend is added */}
-            <strong>$200 </strong>
+            <strong>{property.price_per_night} </strong>
             per night
           </p>
         </div>
