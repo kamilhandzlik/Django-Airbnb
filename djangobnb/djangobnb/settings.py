@@ -80,6 +80,9 @@ REST_AUTH = {
 }
 
 
+AUTH_USER_MODEL = "useraccount.User"
+
+
 # Application definition
 
 INSTALLED_APPS = [
