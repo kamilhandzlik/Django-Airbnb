@@ -23,7 +23,7 @@ const PropertyList = () => {
       const response = await fetch(url);
       const json = await response.json();
       console.log("json:", json);
-      setProperties(json);
+      setProperties(json.data);
     } catch (error) {
       console.error("Error fetching properties:", error);
     }
