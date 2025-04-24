@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import PropertyListItem from "./PropertyListItem";
 import "./PropertyList.css";
+import apiService from "../services/apiService";
 
 /**
  * @typedef {Object} PropertyType
@@ -30,6 +31,8 @@ const PropertyList = () => {
   };
 
   useEffect(() => {
+    apiService.get("/api/properties/");
+
     getProperties();
   }, []);
 
