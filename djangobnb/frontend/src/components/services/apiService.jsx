@@ -1,8 +1,8 @@
+const isDev = import.meta.env.DEV;
+
 const apiService = {
   get: async function (url) {
-    console.log("GET request to:", url);
-    console.log("VITE_API_HOST loaded:", import.meta.env.VITE_API_HOST);
-    console.log("czy w ogóle widać coś z VITE_.", import.meta.env);
+    if (isDev) console.log("GET request to:", url);
 
     try {
       const response = await fetch(`${import.meta.env.VITE_API_HOST}${url}`, {
@@ -18,16 +18,16 @@ const apiService = {
       }
 
       const data = await response.json();
-      console.log("Response JSON:", data);
+      if (isDev) console.log("Response JSON:", data);
       return data;
     } catch (error) {
-      console.error("API GET error:", error);
+      if (isDev) console.error("API GET error:", error);
       throw error;
     }
   },
 
   post: async function (url, body) {
-    console.log("POST request to:", url, "with body:", body);
+    if (isDev) console.log("POST request to:", url, "with body:", body);
 
     try {
       const response = await fetch(`${import.meta.env.VITE_API_HOST}${url}`, {
@@ -44,10 +44,10 @@ const apiService = {
       }
 
       const data = await response.json();
-      console.log("Response JSON:", data);
+      if (isDev) console.log("Response JSON:", data);
       return data;
     } catch (error) {
-      console.error("API POST error:", error);
+      if (isDev) console.error("API POST error:", error);
       throw error;
     }
   },

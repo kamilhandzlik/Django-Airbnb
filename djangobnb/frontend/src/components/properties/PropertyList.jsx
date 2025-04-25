@@ -18,13 +18,10 @@ const PropertyList = () => {
   const [properties, setProperties] = useState([]);
 
   const getProperties = async () => {
-    console.log("Attempting to fetch properties...");
-    const url = "http://localhost:8000/api/properties/";
     try {
-      const response = await fetch(url);
-      const json = await response.json();
-      console.log("json:", json);
-      setProperties(json.data);
+      console.log("Fetching properties...");
+      const tmpProperties = await apiService.get("/api/properties/");
+      setProperties(tmpProperties.data);
     } catch (error) {
       console.error("Error fetching properties:", error);
     }

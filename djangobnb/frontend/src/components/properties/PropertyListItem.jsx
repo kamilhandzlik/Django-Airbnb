@@ -17,9 +17,13 @@ const PropertyListItem = ({ property }) => {
     <div className="property-list-item-pointer">
       <div className="property-list-item">
         <img
-          src={BeachHouse}
-          alt="Beach House"
+          src={property.image_url}
+          alt={property.title}
           className="property-list-item-image"
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = { BeachHouse };
+          }}
         />
       </div>
       <div className="property-list-item-content">
