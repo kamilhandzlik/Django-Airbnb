@@ -34,13 +34,11 @@ const PropertyList = () => {
   }, []);
 
   return (
-    <div>
+    <div className="property-grid">
       {Array.isArray(properties) ? (
         properties.map((property) => (
-          <div className="property-grid" key={property.id}>
-            <div className="property-item">
-              <PropertyListItem key={property.id} property={property} />
-            </div>
+          <div className="property-item" key={property.id}>
+            <PropertyListItem property={property} />
           </div>
         ))
       ) : (
