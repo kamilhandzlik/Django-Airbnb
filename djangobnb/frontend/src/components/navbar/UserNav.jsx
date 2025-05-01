@@ -1,38 +1,65 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./UserNav.css";
 import { Menu, User } from "lucide-react";
 import MenuLink from "./MenuLink";
 import { useLoginModal } from "../hooks/LoginModalContext.jsx";
 import { useSignUpModal } from "../hooks/SignUpModalContext.jsx";
+import { getUserId } from "../lib/actions";
+import { useNavigate } from "react-router-dom";
 
 const UserNav = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [userId, setUserId] = useState(null);
   const loginModal = useLoginModal();
   const signupModal = useSignUpModal();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const id = getUserId();
+    console.log("User ID from localStorage:", id);
+    setUserId(id);
+  }, []);
+
+  const handleToggleMenu = () => {
+    setIsOpen((prev) => !prev);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("session_userid");
+    localStorage.removeItem("session_access_token");
+    localStorage.removeItem("session_refresh_token");
+    setUserId(null);
+    navigate("/");
+  };
 
   return (
     <div className="usernav">
-      <button className="usernav__button" onClick={() => setIsOpen(!isOpen)}>
+      <button className="usernav__button" onClick={handleToggleMenu}>
         <Menu className="icon" />
         <User className="icon" />
       </button>
       {isOpen && (
         <div className="pop-up">
-          <MenuLink
-            label="Log in"
-            onClick={() => {
-              console.log("Clicked Log in");
-              loginModal.openModal();
-            }}
-          />
-          <MenuLink
-            label="Sign up"
-            onClick={() => {
-              console.log("Clicked Sign up");
-              signupModal.openModal();
-            }}
-          />
+          {userId ? (
+            <button onClick={handleLogout} className="logout">
+              Logout
+            </button>
+          ) : (
+            <>
+              <MenuLink
+                label="Log in"
+                onClick={() => {
+                  loginModal.openModal();
+                }}
+              />
+              <MenuLink
+                label="Sign up"
+                onClick={() => {
+                  signupModal.openModal();
+                }}
+              />
+            </>
+          )}
         </div>
       )}
     </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
@@ -9,9 +9,21 @@ import AddPropertyButton from "./AddPropertyButton";
 import Modal from "../modals/Modal";
 import LoginModal from "../modals/LoginModal";
 import SignUpModal from "../modals/SignUpModal";
+import { getUserId } from "../lib/actions";
 
 const Navbar = () => {
   const content = <p>This is the modal content</p>;
+
+  const [userId, setUserUd] = React.useState(null);
+
+  useEffect(() => {
+    const fetchUserId = async () => {
+      const id = await getUserId();
+      console.log("userId:", id);
+      setUserUd(id);
+    };
+    fetchUserId();
+  }, []);
 
   return (
     <nav className="navbar">
