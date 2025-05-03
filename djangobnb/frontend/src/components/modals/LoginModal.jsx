@@ -26,10 +26,10 @@ const LoginModal = () => {
         password: password,
       };
 
-      console.log("Sending login data:", loginData);
+      if (isDev) console.log("Sending login data:", loginData);
 
       const response = await apiService.post("/api/auth/login/", loginData);
-      console.log("Login response:", response);
+      if (isDev) console.log("Login response:", response);
 
       if (response.access && response.refresh && response.user) {
         let userId = null;
@@ -41,7 +41,7 @@ const LoginModal = () => {
           userId = response.user_id;
         }
 
-        console.log("Extracted userId:", userId);
+        if (isDev) console.log("Extracted userId:", userId);
 
         if (userId) {
           handleLogin(userId, response.access, response.refresh);

@@ -52,6 +52,10 @@ const apiService = {
     }
   },
 
+  postProperty: async function (propertyData) {
+    return await this.post("/api/properties/", propertyData);
+  },
+
   postWithoutToken: async function (url, body) {
     if (isDev) console.log("POST without token to:", url, "with body:", body);
 
@@ -70,9 +74,9 @@ const apiService = {
         const data = await response.json();
         if (isDev) {
           if (!response.ok) {
-            console.log("Error response JSON:", data);
+            if (isDev) console.log("Error response JSON:", data);
           } else {
-            console.log("Response JSON:", data);
+            if (isDev) console.log("Response JSON:", data);
           }
         }
         return data;

@@ -26,14 +26,12 @@ const SignUpModal = () => {
     e.preventDefault();
     setErrors([]);
 
-    // Local validation
     if (formData.password1 !== formData.password2) {
       setErrors(["Passwords do not match"]);
       return;
     }
 
     try {
-      // Uwaga: Użycie apiService.postWithoutToken bezpośrednio z danymi
       const response = await apiService.postWithoutToken(
         "/api/auth/register/",
         JSON.stringify({
@@ -43,23 +41,18 @@ const SignUpModal = () => {
         })
       );
 
-      console.log("Registration response:", response);
+      if (isDev) console.log("Registration response:", response);
 
-      // Handle response
       if (response.access) {
-        // Successful login with token
         localStorage.setItem("access_token", response.access);
         localStorage.setItem("refresh_token", response.refresh);
         closeModal();
         navigate("/");
       } else if (response.detail) {
-        // API returned an error message
         setErrors([response.detail]);
       } else {
-        // Handle validation errors from Django
         const errorMessages = [];
 
-        // Extract error messages from response
         Object.keys(response).forEach((key) => {
           const errors = response[key];
           if (Array.isArray(errors)) {

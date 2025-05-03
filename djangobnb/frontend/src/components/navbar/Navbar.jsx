@@ -19,7 +19,7 @@ const Navbar = () => {
   useEffect(() => {
     const fetchUserId = async () => {
       const id = await getUserId();
-      console.log("userId:", id);
+      if (isDev) console.log("userId:", id);
       setUserUd(id);
     };
     fetchUserId();

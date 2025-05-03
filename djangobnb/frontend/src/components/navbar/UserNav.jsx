@@ -16,7 +16,7 @@ const UserNav = () => {
 
   useEffect(() => {
     const id = getUserId();
-    console.log("User ID from localStorage:", id);
+    if (isDev) console.log("User ID from localStorage:", id);
     setUserId(id);
   }, []);
 

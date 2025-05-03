@@ -19,7 +19,7 @@ const PropertyList = () => {
 
   const getProperties = async () => {
     try {
-      console.log("Fetching properties...");
+      if (isDev) console.log("Fetching properties...");
       const tmpProperties = await apiService.get("/api/properties/");
       setProperties(tmpProperties.data);
     } catch (error) {

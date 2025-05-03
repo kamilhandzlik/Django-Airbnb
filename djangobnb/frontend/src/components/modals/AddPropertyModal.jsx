@@ -29,6 +29,15 @@ const AddPropertyModal = ({ isOpen, closeModal }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setErrors([]);
+
+    try {
+      const response = await apiService.postProperty(formData);
+      if (isDev) console.log("Property added:", response);
+      closeModal();
+    } catch (error) {
+      if (isDev) console.error("Failed to add property:", error);
+      setErrors(["Failed to add property. Please try again."]);
+    }
   };
 
   const content = (

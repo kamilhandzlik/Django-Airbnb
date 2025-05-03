@@ -4,7 +4,7 @@ import "./MenuLink.css";
 ("use client");
 
 const MenuLink = ({ label, onClick, href }) => {
-  console.log("Label:", label);
+  if (isDev) "Label:", label;
   return (
     <a className="menu-link" onClick={onClick} href={href}>
       {label}
