@@ -53,7 +53,7 @@ const apiService = {
   },
 
   postProperty: async function (propertyData) {
-    return await this.post("/api/properties/", propertyData);
+    return await this.post("/api/properties/create/", propertyData);
   },
 
   postWithoutToken: async function (url, body) {

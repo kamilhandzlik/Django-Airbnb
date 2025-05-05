@@ -7,6 +7,8 @@ import { useSignUpModal } from "../hooks/SignUpModalContext.jsx";
 import { getUserId } from "../lib/actions";
 import { useNavigate } from "react-router-dom";
 
+const isDev = import.meta.env.DEV;
+
 const UserNav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [userId, setUserId] = useState(null);

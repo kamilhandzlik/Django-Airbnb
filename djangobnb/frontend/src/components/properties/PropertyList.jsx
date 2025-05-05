@@ -5,6 +5,8 @@ import PropertyListItem from "./PropertyListItem";
 import "./PropertyList.css";
 import apiService from "../services/apiService";
 
+const isDev = import.meta.env.DEV;
+
 /**
  * @typedef {Object} PropertyType
  * @property {string} id

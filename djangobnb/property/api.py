@@ -5,7 +5,7 @@ from rest_framework.decorators import (
     permission_classes,
 )
 from .models import Property
-from .serializers import PropertiesListSerializer
+from .serializers import PropertiesListSerializer, CreatePropertiesListSerializer
 
 
 @api_view(["GET"])
@@ -20,3 +20,22 @@ def properties_list(request):
             "data": serializer.data,
         }
     )
+
+
+@api_view(["POST"])
+@authentication_classes([])  
+@permission_classes([])
+def create_property(request):
+    serializer = CreatePropertiesListSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return JsonResponse(
+            {
+                "data": serializer.data,
+            },
+            status=201,
+        )
+    return JsonResponse(
+        {
+            "error": serializer.errors,
+        }, status=400)

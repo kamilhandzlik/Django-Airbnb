@@ -6,6 +6,8 @@ import apiService from "../services/apiService";
 import { handleLogin } from "../lib/actions";
 import { useNavigate } from "react-router-dom";
 
+const isDev = import.meta.env.DEV;
+
 const LoginModal = () => {
   const { isOpen, closeModal } = useLoginModal();
   const navigate = useNavigate();

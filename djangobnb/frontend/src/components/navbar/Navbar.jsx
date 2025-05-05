@@ -10,6 +10,7 @@ import Modal from "../modals/Modal";
 import LoginModal from "../modals/LoginModal";
 import SignUpModal from "../modals/SignUpModal";
 import { getUserId } from "../lib/actions";
+const isDev = import.meta.env.DEV;
 
 const Navbar = () => {
   const content = <p>This is the modal content</p>;

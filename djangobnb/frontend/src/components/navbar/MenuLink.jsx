@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./MenuLink.css";
 ("use client");
+const isDev = import.meta.env.DEV;
 
 const MenuLink = ({ label, onClick, href }) => {
   if (isDev) "Label:", label;

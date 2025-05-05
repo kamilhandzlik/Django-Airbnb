@@ -5,6 +5,8 @@ import { useSignUpModal } from "../hooks/SignUpModalContext.jsx";
 import { useNavigate } from "react-router-dom";
 import apiService from "../services/apiService.jsx";
 
+const isDev = import.meta.env.DEV;
+
 const SignUpModal = () => {
   const { isOpen, closeModal } = useSignUpModal();
   const navigate = useNavigate();
